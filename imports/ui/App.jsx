@@ -31,7 +31,7 @@ export const App = () => {
       <header>
         <div className="app-bar">
           <div className="app-header">
-            <h1>📝️ Welcome to Meteor!</h1>
+            <h1>Simple crud with Meteor</h1>
           </div>
         </div>
       </header>
