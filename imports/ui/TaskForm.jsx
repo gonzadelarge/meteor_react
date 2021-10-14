@@ -21,7 +21,8 @@ export const TaskForm = ({ taskToEdit }) => {
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        if (!text || !textEdit) return;
+
+        if (!text) return;
 
         state !== null ? editTask() : createTask();
 
@@ -38,7 +39,7 @@ export const TaskForm = ({ taskToEdit }) => {
         })  
     }
     const editTask = () => {
-    
+        
         TasksCollection.update( taskToEdit._id, {
             text: textEdit.trim()
         })
