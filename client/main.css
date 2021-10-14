@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #315481;
+  background-image: linear-gradient(to bottom, #d5d6d8, #fdfdfc 100%);
+  background-attachment: fixed;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+}
+
+button {
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  color: white;
+  box-shadow: 0 3px 3px rgba(34, 25, 25, 0.4);
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: auto;
+  background: white;
+  padding: 20px;
+  padding-top: 35px;
+}
+
+.main::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: inherit;
+}
+
+header {
+  background: #b9f1ff;
+  background-image: linear-gradient(to right, #9585ee, #9bb3f7 100%);
+  padding: 25px;
+  color: white;
+  position: relative;
+  box-shadow: 0 3px 3px rgba(126, 126, 126, 0.4);
+}
+
+.app-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-bar h1 {
+  font-size: 1.5em;
+  margin: 0;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.task-form {
+  display: flex;
+  margin: 16px;
+}
+
+.task-form > input {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 10px 6px;
+  background: transparent;
+  border: 1px solid #aaa;
+  width: 100%;
+  font-size: 1em;
+  margin-right: 16px;
+}
+
+.task-form > input:focus {
+  outline: 0;
+}
+
+.task-form > button {
+  min-width: 100px;
+  height: 95%;
+  background-color: #315481;
+}
+
+.tasks {
+  list-style-type: none;
+  padding-inline-start: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.tasks > li {
+  display: flex;
+  padding: 16px;
+  border-bottom: #eee solid 1px;
+}
+
+.tasks > li > span {
+  flex-grow: 1;
+}
+
+.tasks > li > button {
+  width: 40px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #eb5261;
+  margin: 0 5px;
+}
+
+input[type='checkbox'] {
+  margin-right: 10px;
+}
