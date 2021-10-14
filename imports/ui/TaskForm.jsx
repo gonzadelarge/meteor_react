@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { TasksCollection } from '/imports/api/TasksCollection';
 
 
-
 export const TaskForm = ({ taskToEdit }) => {
 
     const [text, setText] = useState("");
@@ -15,8 +14,6 @@ export const TaskForm = ({ taskToEdit }) => {
             setState(taskToEdit)
         }
     }, [taskToEdit])
-
-    
 
     const handleSubmit = (e) => {
 
@@ -40,8 +37,10 @@ export const TaskForm = ({ taskToEdit }) => {
     }
     const editTask = () => {
         
-        TasksCollection.update( taskToEdit._id, {
-            text: textEdit.trim()
+        const { _id } = taskToEdit
+
+        TasksCollection.update( {_id: _id }, {
+            text: text.trim()
         })
     }
 
